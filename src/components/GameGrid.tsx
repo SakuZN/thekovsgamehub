@@ -6,7 +6,7 @@ import GcStyleContainer from "./GCStyleContainer.tsx";
 
 const GameGrid = () => {
 
-    const {games, error, isLoading} = useGames();
+    const {data, error, isLoading} = useGames();
     const skeletons = Array(10).fill(0);
 
     return (
@@ -18,7 +18,7 @@ const GameGrid = () => {
                         <GCSkeleton key={i}/>
                     </GcStyleContainer>) : null}
 
-                    {games.map(game =>
+                    {data.map(game =>
                         <GcStyleContainer>
                             <GameCards key={game.id} game={game} />
                         </GcStyleContainer>

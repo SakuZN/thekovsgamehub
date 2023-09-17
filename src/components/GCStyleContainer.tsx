@@ -7,7 +7,7 @@ interface Props {
 
 const GcStyleContainer = ({children}: Props) => {
     return (
-        <Box width={'275px'}  borderRadius={10} overflow='hidden'>
+        <Box borderRadius={10} overflow='hidden'>
             {children}
         </Box>
     )

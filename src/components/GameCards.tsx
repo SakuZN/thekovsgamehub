@@ -1,5 +1,6 @@
 import {Game} from "../hooks/useGames.ts";
 import {Card, CardBody, Heading, Image} from "@chakra-ui/react";
+import PlatformIconlist from "./PlatformIconlist.tsx";
 
 interface GCProps {
     game : Game
@@ -14,6 +15,7 @@ const GameCards = ( {game} : GCProps) => {
                 <Heading fontSize={'2xl'}>
                     {game.name}
                 </Heading>
+                <PlatformIconlist platforms={game.parent_platforms.map(p => p.platform)}/>
             </CardBody>
         </Card>
     )

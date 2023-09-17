@@ -11,7 +11,7 @@ interface GCProps {
 
 const GameCards = ( {game} : GCProps) => {
     return (
-        <Card width={'275px'}  borderRadius={10} overflow='hidden'>
+        <Card >
             <Image src={cropImageURL(game.background_image)}/>
             <CardBody>
                 <Heading fontSize={'2xl'}>

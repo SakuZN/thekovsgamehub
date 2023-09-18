@@ -23,12 +23,14 @@ const GenreList = ({selectedGenre,onSelect}: GLProps) => {
                             boxSize={'32px'}
                             borderRadius={8}
                             src={cropImageURL(genre.image_background)}
+                            flexShrink={0} // Prevent the image from shrinking
                         />
                         <Button
                             fontSize='lg'
                             variant={'link'}
                             onClick={() => onSelect(genre)}
                             fontWeight={selectedGenre?.id === genre.id ? 'bold' : 'normal'}
+                            textAlign={'left'} // Optionally aligns text to the left
                         >
                             {genre.name}
                         </Button>

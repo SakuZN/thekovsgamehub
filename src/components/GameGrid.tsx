@@ -3,17 +3,15 @@ import useGames from "../hooks/useGames.ts";
 import GameCards from "./GameCards.tsx";
 import GCSkeleton from "./GCSkeleton.tsx";
 import GcStyleContainer from "./GCStyleContainer.tsx";
-import {Genre} from "../hooks/useGenres.ts";
-import {Platforms} from "../hooks/usePlatforms.ts";
+import {Query} from "../App.tsx";
 
 interface GGProps {
-    selectedGenre: Genre | null
-    selectedPlatform: Platforms | null
+    query: Query
 }
 
-const GameGrid = ({selectedGenre, selectedPlatform}: GGProps) => {
+const GameGrid = ({query}: GGProps) => {
 
-    const {data, error, isLoading} = useGames(selectedGenre, selectedPlatform);
+    const {data, error, isLoading} = useGames(query);
     const skeletons = Array(data.length).fill(0);
 
     return (

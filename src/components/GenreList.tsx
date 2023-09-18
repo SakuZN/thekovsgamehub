@@ -18,7 +18,7 @@ const GenreList = ({selectedGenre,onSelect}: GLProps) => {
             <Heading fontSize ='2xl' marginBottom={3}>Genres</Heading>
 
             <List>
-                {data.map((genre) =>
+                {data.results.map((genre: Genre) =>
                     <ListItem
                         key={genre.id}
                         paddingY='10px'

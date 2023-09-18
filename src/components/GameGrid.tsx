@@ -19,7 +19,7 @@ const GameGrid = ({query}: GGProps) => {
             {error ? <Text>{error}</Text> :
                 isLoading
                     ? (
-                        <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 5}} spacing={3} padding={10}>
+                        <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 4}} spacing={6} padding={10}>
                             {skeletons.map((_, i) =>
                                 <GcStyleContainer  key={i}>
                                     <GCSkeleton/>
